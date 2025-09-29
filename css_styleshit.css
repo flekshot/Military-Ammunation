@@ -1,5 +1,4 @@
 
-
 @import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
 
 :root {
@@ -27,7 +26,6 @@ body {
     #2e3b23 80px
   );
   color: #e6eef6;
-  /* Add military-style lines to background */
   background-image:
     repeating-linear-gradient(
       135deg,
@@ -192,7 +190,7 @@ footer {
 .logo h1 { font-size: 18px; }
 }
 
-/* Military badge effect for images */
+
 .weapon img {
   border: 3px solid var(--accent);
   box-shadow: 0 4px 16px #232d1b;
@@ -228,19 +226,19 @@ body::before {
   z-index: -2;
 }
 
-/* Неоновая подсветка для карточек */
+
 .card, .weapon {
   box-shadow:
-    0 0 16px 2px #c19a6b88, /* неоновый светлый акцент */
+    0 0 16px 2px #c19a6b88, 
     0 6px 24px rgba(35,45,27,0.6);
   border: 1px solid var(--accent);
 }
 
-/* Неоновая рамка для изображений оружия */
+
 .weapon img {
   border: 3px solid var(--accent);
   box-shadow:
-    0 0 18px 2px #c19a6bcc, /* неоновый светлый акцент */
+    0 0 18px 2px #c19a6bcc, 
     0 4px 16px #232d1b;
   filter: grayscale(20%) contrast(1.1);
   transition: filter 0.2s, transform 0.2s, box-shadow 0.2s;
@@ -250,6 +248,43 @@ body::before {
   filter: none;
   transform: scale(1.03) rotate(-2deg);
   box-shadow:
-    0 0 32px 4px #c19a6bff, /* ярче при наведении */
+    0 0 32px 4px #c19a6bff, 
     0 4px 16px #232d1b;
+}
+.main-nav {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.nav-link {
+  padding: 8px 16px;
+  background: var(--glass);
+  color: var(--accent);
+  text-decoration: none;
+  border-radius: 6px;
+  border: 1px solid var(--accent);
+  transition: all 0.3s ease;
+  font-family: 'Staatliches', Arial, sans-serif;
+  letter-spacing: 1px;
+}
+
+.nav-link:hover {
+  background: var(--accent);
+  color: #232d1b;
+  transform: translateY(-2px);
+}
+.breadcrumbs {
+  margin: 16px 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.breadcrumbs a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.breadcrumbs a:hover {
+  text-decoration: underline;
 }
