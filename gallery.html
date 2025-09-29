@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Галерея оружия</title>
+  <meta name="description" content="Фотогалерея известных образцов стрелкового оружия.">
+  <link rel="stylesheet" href="css_styleshit.css">
+  <style>
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 16px;
+      margin-top: 20px;
+    }
+    .gallery-item {
+      border-radius: 10px;
+      overflow: hidden;
+      border: 2px solid var(--accent);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+      transition: transform 0.3s ease;
+    }
+    .gallery-item:hover {
+      transform: scale(1.05);
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      display: block;
+    }
+    .gallery-caption {
+      padding: 8px;
+      background: var(--card);
+      color: var(--muted);
+      font-size: 14px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">
+        <div class="mark">IMG</div>
+        <div>
+          <h1>Галерея оружия</h1>
+          <p class="lead">Визуальная коллекция известных моделей стрелкового оружия.</p>
+        </div>
+      </div>
+      <nav>
+        <a class="btn" href="htmlmiliray.html">На главную</a>
+      </nav>
+    </header>
+
+    <main>
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="https://www.pragueranger.cz/upload/20241114220842-9012--800.webp" alt="AK-47">
+          <div class="gallery-caption">AK-47</div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://static.diffen.com/uploadz/0/0f/m4-carbine.jpg" alt="M16">
+          <div class="gallery-caption">M16</div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://www.pragueranger.cz/upload/20250514112535-7896-1200-675.webp" alt="MP5">
+          <div class="gallery-caption">MP5</div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://cdnammoclub.ammoforsale.com/ammo-club/media/DSC08507-scaled.jpg" alt="Glock 17">
+          <div class="gallery-caption">Glock 17</div>
+        </div>
+ 
+    <footer>
+      <p>© Фотогалерея. Все изображения взяты из открытых источников.</p>
+    </footer>
+  </div>
+</body>
+</html>
