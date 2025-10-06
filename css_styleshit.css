@@ -165,6 +165,46 @@ footer {
   border-top: 2px dashed var(--accent);
   padding-top: 12px;
 }
+.card.weapon {
+    min-height: 620px;
+    max-height: 680px;
+    background: linear-gradient(135deg, #2e3b23 60%, #c19a6b22 100%);
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(193,154,107,0.18), 0 2px 8px #232d1b;
+    border: 2px solid var(--accent);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.card.weapon:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 16px 48px rgba(193,154,107,0.28), 0 4px 16px #232d1b;
+}
+
+.card.weapon img {
+    height: 200px;
+    object-fit: cover;
+    width: 100%;
+    border-radius: 18px 18px 0 0;
+    border-bottom: 2px solid var(--accent);
+    box-shadow: 0 2px 12px #c19a6b44;
+}
+
+.card-title {
+    color: var(--accent);
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin: 16px 0 8px 0;
+    text-align: center;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 0 #232d1b;
+}
+
+.specs {
+    margin: 0 12px 12px 12px;
+    font-size: 0.95rem;
+}
 /* Bootstrap overrides */
 .navbar-dark .navbar-brand { color: var(--accent) !important; }
 .navbar-dark .nav-link { color: var(--muted) !important; }
@@ -240,19 +280,39 @@ p.lead { color: var(--muted); margin: 8px 0 0; }
 }
 
 
-.weapon img {
-  border: 3px solid var(--accent);
-  box-shadow: 0 4px 16px #232d1b;
-  filter: grayscale(20%) contrast(1.1);
-  transition: filter 0.2s, transform 0.2s;
+.weapon-img, .card.weapon img {
+    height: 180px;
+    object-fit: cover;
+    width: 100%;
+    border-radius: 8px;
+    margin-top: 8px;
+    display: block;
 }
 
 .weapon img:hover {
   filter: none;
   transform: scale(1.03) rotate(-2deg);
 }
+.card-body {
+    flex: 1 1 auto;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
 
-
+.card-text {
+    max-height: 140px;      /* Одинаковая высота для всех карточек */
+    min-height: 140px;      /* Гарантирует одинаковый размер даже при коротком тексте */
+    overflow-y: auto;       /* Включает вертикальную прокрутку */
+    color: #212529;
+    background: #fffbe6;
+    font-weight: 600;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+    box-shadow: 0 1px 4px #c19a6b22;
+    font-size: 1rem;
+}
 aside.card {
   background: url('https://www.transparenttextures.com/patterns/camo.png'), var(--card);
   background-size: 120px 120px;
