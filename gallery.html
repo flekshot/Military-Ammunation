@@ -65,7 +65,18 @@
             </div>
             <div class="carousel-item">
                 <img src="https://www.pragueranger.cz/upload/20250514112535-7896-1200-675.webp" class="d-block w-100" alt="MP5">
-                <div class="carousel-caption d-none d-md-block"><h5>MP5</h5></div>
+                <style>
+                  .carousel-caption h5.neon {
+                  color: #39ff14;
+                  text-shadow:
+                    0 0 5px #39ff14,
+                    0 0 10px #39ff14,
+                    0 0 20px #39ff14,
+                    0 0 40px #39ff14,
+                    0 0 80px #39ff14;
+                  }
+                </style>
+                <div class="carousel-caption h5-none d-md-block"><h5>MP5</h5></div>
             </div>
             <div class="carousel-item">
                 <img src="https://cdnammoclub.ammoforsale.com/ammo-club/media/DSC08507-scaled.jpg" class="d-block w-100" alt="Glock 17">
@@ -111,12 +122,6 @@
           height: 350px; /* Set a fixed height for all images */
         }
         </style>
-        <!-- Cards для 4 изображений (Task 8: card-group) -->
-        <div class="card-group mt-4"> <!-- Stack на mobile -->
-            <div class="card"><img src="https://www.pragueranger.cz/upload/20241114220842-9012--800.webp" class="card-img-top" alt="AK-47"><div class="card-body"><h5>AK-47</h5></div></div>
-            <div class="card"><img src="https://static.diffen.com/uploadz/0/0f/m4-carbine.jpg" class="card-img-top" alt="M16"><div class="card-body"><h5>M16</h5></div></div>
-            <!-- +3 cards -->
-        </div>
     </main>
 
     <!-- Тот же footer -->
